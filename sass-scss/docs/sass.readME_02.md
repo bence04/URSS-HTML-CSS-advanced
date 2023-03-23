@@ -12,15 +12,15 @@ Az scss fájlban is van lehetőségünk már ciklusok (@for / @each) írására 
 
 Ismerős lehet a kód, nézzük meg, hogy pontosan mi mit jelent.
 
-$value - létrehozunk egy változót, aminek az értékét fogjuk vizsgálni
+- $value - létrehozunk egy változót, aminek az értékét fogjuk vizsgálni
 
-main {} - a main tagen belüli formázást állítjuk be
+- main {} - a main tagen belüli formázást állítjuk be
 
-@if - így határozzuk meg az if ágat, majd két paramétert adunk meg, közöttük relációs operátorral
+- **@if** - így határozzuk meg az if ágat, majd két paramétert adunk meg, közöttük relációs operátorral
 
-Itt a $value értékét vizsgáljuk meg, majd {} között az értékadás
+- Itt a $value értékét vizsgáljuk meg, majd {} között az értékadás
 
-@else - az else ágat határozza meg, {} között pedig értéket adunk a propertynek.
+- @else - az else ágat határozza meg, {} között pedig értéket adunk a propertynek.
 
 
 
@@ -29,17 +29,15 @@ A for ciklus is a megszokott módon működik, ismétlődő műveletek elvégzé
 
 ![alt for](./img/for.PNG)
 
-A ciklust a @for kulcsszóval indítjuk el, majd létrehozunk egy konvencionálisan $i elnevezésű változót, amely az indexünk lesz.
+A ciklust a **@for** kulcsszóval indítjuk el, majd létrehozunk egy konvencionálisan $i elnevezésű változót, amely az indexünk lesz.
 
-Ez az index fogja a futás során változtatni az értékét, ezután meghatározzuk, hogy mettől meddig fusson le a ciklus - erre használjuk a from és
+Ez az index fogja a futás során változtatni az értékét, ezután meghatározzuk, hogy mettől meddig fusson le a ciklus - erre használjuk a **from** és a **through** kulcsszavakat.
 
-a through kulcsszavakat.
+- A for ciklus {} zárójelei között fogjuk meghatározni, hogy mit is csináljon a ciklus.
 
-A for ciklus {} zárójelei között fogjuk meghatározni, hogy mit is csináljon a ciklus.
+- .list- - list nevű osztályokat szeretnénk létrehozni
 
-.list- - list nevű osztályokat szeretnénk létrehozni
-
-#{$i} - interpolation alkalmazásával hozzáfűzzük a változó aktuális értékét
+- #{$i} - interpolation alkalmazásával hozzáfűzzük a változó aktuális értékét
 
 padding: értéket adunk a padding propertynek - a 2px konstans érték, ezt szorozzuk meg az $i változó aktuális értékével
 
@@ -54,16 +52,16 @@ Az @Each vezérlési szerkezettel, ciklussal listákon tudunk végigmenni és í
 
 ![alt each](./img/each.PNG)
 
-Nem meglepő módon az @Each kulcsszóval indítjuk a ciklust.
+Nem meglepő módon az **@Each** kulcsszóval indítjuk a ciklust.
 
-$s - változót deklarálunk, amely minden körben megkapja az aktuális paraméter / list elem értékét
+- $s - változót deklarálunk, amely minden körben megkapja az aktuális paraméter / list elem értékét
 
-in - ezt a kulcsszót követi a paraméter-lista, a megadott értékekkel
+- in - ezt a kulcsszót követi a paraméter-lista, a megadott értékekkel
 
-() - zárójelek közé tesszük be a paramétereket - ide közvetlenül jöhetnek be az értékek, ahogy a példa is mutatja, de korábban létrehozott map vagy lista változóval is beírhatjuk
+- () - zárójelek közé tesszük be a paramétereket - ide közvetlenül jöhetnek be az értékek, ahogy a példa is mutatja, de korábban létrehozott map vagy lista változóval is beírhatjuk
 
-{} - zárójelek között azt határozzuk meg, hogy mit végezzen el a ciklus
+- {} - zárójelek között azt határozzuk meg, hogy mit végezzen el a ciklus
 
-.#{$} - ismét interpolation alkalmazásával létrehozzuk az adott lista/map elem felhasználásával az új osztályt
+- .#{$} - ismét interpolation alkalmazásával létrehozzuk az adott lista/map elem felhasználásával az új osztályt
 
 font-weight - a lista elemét kapja a property értéknek
