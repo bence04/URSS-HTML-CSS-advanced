@@ -1,0 +1,53 @@
+FELADAT: épitsd fel egy mini-oldal stílus jegyeit az scss pre-processor segítségével.
+
+Fő szempontok:
+
+- a HTML-ben a class szelektorok elnevezése legyen "láncszerű"
+- Minden css szabály legyen egymásba ágyazva a nesting elve alapján
+- Használjd fel MINÉL TÖBB helyen a deklarált scss változókat
+- Ne felejtsd el, hogy le kell fordítanod rednszeresen a scss file-t! Érdemes a --watch flag paranccsal futtatni a parancsot.
+- az elvárt emegjelenítéshez egy képes segítséget találsz a feladatleírása mellett ( nest-and-var.png file )
+
+Lépések:
+1. az index.html-ben egészítsd ki a class szelektorok elnevezéseit. Minden szelektor utaljon hogy melyik elemen belül milyen elemre vonatkozik
+2. épitsd a src/stlye.scss file-ban a szelektorok "vázát". (Nesting) Szabályokat még ne írj bele.
+3. deklarálj a file elején 5 db változót az alábbi nevekkel és induló értékekkel:
+    - main-border: 10px
+    - button-width: 120px
+    - background-color: rgb(255,204,0)
+    - button-background-color: rgb(0,51,102)
+    - text-color: rgb(204,204,204)
+
+4. írd meg az egyes elemek (class szelektorok) szabályait:
+    - a main:
+        - szélessége: a gomb szélességének 4 szerese (megjegy: ha egy változó értéke egyszerübb érték (pl: 50px), akkor használhatóak alap matematikai műveletek)
+        - magassága: a gomb szélessége
+        - háttérszín: az alap háttérszín
+        - padding: a "main-border" kétszerese
+        - border-radius: a "main-border" értéke
+        - margin: 3% auto
+        - box-shadow: 1px 4px 4px 0 rgba(30,30,30,0.3)
+
+    - h3:
+        - középre zárt szöveg
+        - szín: a gomb háttér színe
+
+    - div:
+        - display: flex
+        - flex rendezési iránya: "row"
+        - tartalmak térköze: "space-around"
+
+    - btn:
+        - border-radius: a "main-border"
+        - szélesség: a deklarált gomb szélesség
+        - *magasság: a szélesség egy ötöde (használj változót!)
+        - háttérszín: a deklarált gomb háttérszíne
+        - szöveg szín: a deklarált szövegszín
+
+        * megjegyzés: mivel osztásnál előfordulhat, hogy törtszám jön ki olyan esetben, ahol egész számot szeretnénk,
+        ezért hibaüzenet adhat a fordító, hogy kerekítsük az eredményt ==> (pl: 24.7px lenne az eredmény).
+        Ilyenkor érdemes az egyik beépített "math" metódust használni kerekítésre: (round, ceil)
+          Az osztás művelete: @use "sass:math" majd math.div() ==> lásd doksi...
+
+5. ha mindent megfelelően oldottál meg, a mellékelt képhez hasonló eredményt kell kapnod. Játsz kicsit a változók értékeivel!
+   Figyeld meg hogy változik az összkép ha egyetlen helyen megváltoztatsz egy értéket.

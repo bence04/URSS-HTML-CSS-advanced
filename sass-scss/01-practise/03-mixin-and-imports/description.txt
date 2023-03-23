@@ -1,0 +1,97 @@
+FELADAT: Épitsd fel egy mini webshop oldal stílus jegyeit SCSS segitségével
+
+Főbb szempontok:
+- Minden css szabály legyen egymásba ágyazva a nesting elve alapján
+- Használjd fel MINÉL TÖBB helyen a deklarált scss változókat és Mixineket.
+- @use paranccsal importáld be a megfelelő modulokat
+- az elvárt megjelenítéshez képes segítséget találsz a feladatleírása mellett ( shop-full.png file )
+
+Lépések:
+1. Az index.html file-ban linkeld be a képeket (a dist mappában van egy "img" mappa forrásként)
+2. az src/scss/module/_colors file-ban deklarálj 3 változót, ami színeket fognak tárolni az alább értékekkel
+    - text-color-light: rgb(241, 240, 255)
+    - text-color-medium: rgb(195, 195, 229)
+    - background-color: rgb(68, 50, 102)
+
+3. az src/scss/module/_mixin file-ban deklarálj 4 db "mixin"-t:
+    - border-shape($radius, $padding:5px) => 2 paraméter segitségével kerekíti az elem éleit, és belső térközt állit be
+    Szabályai:
+        - border-radius:  a kapott paraméter értéke
+        - display: block
+        - padding: ha kapott paramétert akkor annak az értékét vegye fel
+
+    - set-content-center => két kötelező paraméter (szélesség, margin). Beállítja középre az elemet a megadott paraméterek segitségével
+    Szabályai:
+        - width: a megadott paraméter
+        - margin: a megadott "margin" paraméter + "auto"
+        - display: block
+
+
+    - button-setting => 3 kötelező paraméter (szélesség, háttérszin, szövegszín). Beállitja egy gomb méretét és színeit
+    Szabályai:
+        - width: a megadott paraméter
+        - height: a megadott szélesség negyede
+        - background-color: a (paraméterben) megadott háttérszin
+        - color: a megadott szövegszín
+
+    - wide-screen-layout => nincs paraméter, flex-box segitségével az belső elemek egymás mellett jelennek meg
+    Szabályai:
+        - display: flex
+        - flex-direction: row
+        - justify-content: space-around
+
+4. Épitsd fel a src mappában található style.scss file-t:
+    - a html file most tartalmaz minden szükséges szelektort
+    - importáld be a modulokat a @use parancs segitségével
+    - épitsd a src/stlye.scss file-ban a szelektorok "vázát". (Nesting) Szabályokat még ne írj bele.
+
+5. Ird meg az alábbi szabályokat (használd fel a mixineket és változókat!):
+    - body:
+        - háttérszín a text-color-light
+
+    - h1:
+        - szöveg középre zárva
+        - szin: a "background-color" értéke
+
+    - list:
+        - állitsd be az éleket (border-shape mixinnel) paraméterek:10px, 20px
+        - állitsd középre a tartalmat (set-content-center) paraméterek: 70%, 2%
+        - a belső elemeket állitsd egymás mellé a wide-screen-layout mixinnel
+        - adj háttérszint: "background-color" változóval
+
+    - card:
+         - állitsd be az éleket (border-shape mixinnel) paraméterek:10px, 15px
+         - állitsd középre a tartalmat (set-content-center) paraméterek: 25%, 2%
+         - háttérszín: a világos szöveg színe
+
+    - img:
+         - állitsd középre a tartalmat (set-content-center) paraméterek: 90%, 2%
+         - border:  1pixel vastag solid színe: "text-color-medium"
+
+    - button-wrapper:
+        - állitsd be egymás mellé a tartalmat a wide-screen-layout mixin segitségével
+
+    - button:
+        - állitsd be az éleket (border-shape mixinnel) paraméterek:12px, 5px
+        - állitsd be a gombok megjelenítését a button-setting mixinnel. Paraméterek: 120px, "background-color", "text-color-light"
+
+6. Ha mindent megfelelően oldottál meg, a mellékelt képhez hasonló eredményt kell kapnod (full-screen). Játsz kicsit a változók értékeivel!
+   Figyeld meg, hogy változik az összkép, ha egyetlen helyen megváltoztatsz egy értéket.
+   Hasonlítsd össze a legenerált CSS tartalmat is az SCSS tartalommal.
+
+
+7. Opcionális feladat: Legyen reszponzív megjelenése az oldalnak. (lásd shop-mobile.png kép)
+    - Hozz létre egy "small-screen-layout" mixin-t a _mixin.scss file-ban. Paraméter nem kell.
+    Szabályai:
+        - display: flex
+        - flex-direction: oszlop
+        - align-items: center
+
+    - a "@media"  segitségével hozz létre egy-egy töréspontot,ha 750px alá csökkene a képenyő méret.
+    (a töréspontokat stlye.scss file.ban a megadott szelektorokon belül kell elhelyezned)
+
+        - első töréspont helye a "list" elem => hivd meg a "small-screen-layout" mixin-t
+
+        - második töréspont: "card" elem => hivd meg benne a "set-conent-center" mixin-t (paraméterek:90%, 2%)
+
+    Ha minden jól van összekötve, akkor 750px alatt oszlopos széles megjelenésben kell megjelenniük a kártyáknak (lásd. említett kép)

@@ -64,4 +64,4 @@ Nem meglepő módon az **@Each** kulcsszóval indítjuk a ciklust.
 
 - .#{$} - ismét interpolation alkalmazásával létrehozzuk az adott lista/map elem felhasználásával az új osztályt
 
-font-weight - a lista elemét kapja a property értéknek
+- font-weight - a lista elemét kapja a property értéknek
