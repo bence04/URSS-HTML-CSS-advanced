@@ -1,0 +1,24 @@
+.move-me {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid black;
+  }
+
+  .rotate-me, .scale-me {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    background-color: lightblue;
+    border: 1px solid black;
+  }
+
+  .hover-me {
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+  
+  .hover-me:hover {
+    width: 300px;
+  }
