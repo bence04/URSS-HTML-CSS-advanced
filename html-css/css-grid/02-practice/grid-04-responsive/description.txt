@@ -1,0 +1,50 @@
+----- FELADAT -----------
+
+Készíts reszponzív mini alkalmazást a Grid segítsgével.
+Használj SEO-nak, szemantikai elemeknek megfelelő oldalfelépítést
+Nézd meg a mellékelt képeket a 3 különböző szélességű megjelenéshez.
+
+Elsőnek csináld meg a grid vázát, használj segéd színeket.
+Utána építsd bele a mobile-nézetben az elemeket.
+
+A Header mobile nézetben egy háttérképet tartalmaz. 200px magas lehet.
+Középre 70 % szélességben absolut positionnel helyez el egy szöveget.
+
+A tartalom mobile nézetben 100% szélességű.
+4 fénykép kártyát helyez el, használj árnyékolást köréjük.
+Alattuk felettük legyen térköz.
+
+Az article elem a kártyák alatt színátmenetes képet tartalmaz (kék és zöld között)
+Van egy körbe megjelenített kép. Absolute position-el középre és fentre súrva.
+Mint ha egy matrica tartaná a Regisztrációs doboz szövegét.
+
+Az article szövege egy áttetsző fehér háttér dobozban legyen.
+
+Alul a Footer két elemet tartalmaz.
+
+Flexboxxal rendezd a két elemet egymás alá.
+A fenti szöveg tartalom egy fehéres háttérben van.
+
+--------------------------------------------------
+
+Tablet nézetben.
+
+Header szöveg doboz jobb oldara vándorol 40% szélességben a headernek.
+Fentről és jobbról 2%-ban behúzva.
+
+Alatta a kártyák 2 sorban 2-esével vannak. használhatsz beágyazott gridet, vagy flexbox-ot is.
+
+Article (regisztráció) átalakul a kép, már nem absolut position-ben van.
+Flex-boxxal csinálj két oszlopot 35 és 65% szélességben. Rakd a képet a kisebb oszlopba.
+Rendezd a tartalmat középre
+
+Footer-ben a fő elemek rendeződjenek egymás mellé
+
+---------------------------------------------------------
+
+Teljes nézetben
+3 kártya található felül és alattuk 75% szélességben a 4.-ik kártya
+
+---------------------------------------------
+
+Készíts Facebook-ra  OG protokolnak megfelelő megjelenést
