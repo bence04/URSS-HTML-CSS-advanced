@@ -27,7 +27,7 @@ Itt a $value értékét vizsgáljuk meg, majd {} között az értékadás
 #### @for
 A for ciklus is a megszokott módon működik, ismétlődő műveletek elvégzéséhez használjuk.
 
-for
+![alt for](./img/for.PNG)
 
 A ciklust a @for kulcsszóval indítjuk el, majd létrehozunk egy konvencionálisan $i elnevezésű változót, amely az indexünk lesz.
 
@@ -45,14 +45,14 @@ padding: értéket adunk a padding propertynek - a 2px konstans érték, ezt szo
 
 És mindez a sima CSS fileban:
 
-for2
+![alt for2](./img/for2.PNG)
 
 
 
 #### @Each
 Az @Each vezérlési szerkezettel, ciklussal listákon tudunk végigmenni és így az elemeket felhasználni.
 
-each
+![alt each](./img/each.PNG)
 
 Nem meglepő módon az @Each kulcsszóval indítjuk a ciklust.
 
