@@ -1,0 +1,88 @@
+-------- MINI PHOTO BLOGGER side SCSS-el ---------
+
+--- FELADAT:
+
+Készíts egy mini fotó-blogger oldalt a scss segítségével.
+Nézd meg két nézetben a img mappán belül az oldal fényképeit (photos-shop-medium és mobile.pdf)
+
+
+A photo-blog mappában belül adott egy html template. Indulj ki ebből.
+A fő feladat, hogy scss-el alakítsd ki a nézetet.
+
+- Hozz létre két változót:
+
+"card-shadow"         értéke: 1px 4px 4px 0 rgba(50,50,50,0.5)
+"basic-border-radius" értéke: 0.7rem
+
+
+- Készítsd két mixin-t:
+
+--- "setCenter":
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+valamint:
+
+
+---- "setTextColorAndAlign":
+    text-align: center;
+    font: 1rem/1rem 'Arial', Helvetica, sans-serif;
+    width: 70%;
+    margin: 0 auto;
+
+kezd el felépíteni a scss a nesting segítségével:
+
+---- header banner:
+
+width: 100%
+min-height: 170px
+
+Állítsd be a img-ben lévő cover.jpg háttérképként
+Ne legyen ismétlődés, és a background-size legyen: cover
+
+Használd fel a "setCenter" mixin-t, hogy középre zárja a beltartalmat (szöveg "text" dobozt)
+
+Nesting-gel add meg a banner-text classnak a fő értékeket:
+           background: rgba(20, 20, 20, 0.5);
+           color: whitesmoke;
+    Használd fel a "setTextColorAndAlign" mixint hogy a szöveget megformázza
+
+
+-- main
+   width: 90%;
+   margin: 3% auto;
+
+Nesting-gel építsd fel a cards-holder tartalmat:
+    width: 97%;
+    margin: 1% auto;
+    min-height: 220px;
+    display:inline-block
+    adj meg neki a megfelelő változóval árnyékolást
+    adj meg neki a megfelelő változóval lekerekítést
+    
+    Használd media query pontot (min 700px-re)
+    kb. harmadát vegye fel a kép a szélességnek (formázd ahogy szeretnéd)
+    
+   A cards-holder belüli képet alakitsd ki a nézetnek megfelelően. Használj tetszőleges ulr-t a képeknek
+   A "text" tartalom a kép alatt:
+    color: rgb(30, 30, 30);
+    használd fel a "setTextColorAndAlign" mixint hogy a szöveget megformázza
+
+--- article
+   background: lightblue;
+   min-height: 150px;
+
+   használd fel a "setCenter" mixin-t, hogy középre zárja a beltartalmat (szöveg "text" dobozt)
+   használd fel a két változót, hogy az árnyékolást, vagy a sarkok lekerekítését beállitsd
+
+   A  "text" tartalom az article-en belül:
+     background: rgba(20, 20, 20, 0.5);
+     color: whitesmoke;
+     állitsd be a megfelelő változóval a lekerekítést
+
+    Használd fel a "setTextColorAndAlign" mixint, hogy a szöveget megformázza
+
+Végül nézd meg a kódot, lehetett volna még valami ismétlődést, refaktorálni, kiszervezi mix-inbe vagy változóba?
+Játssz kicsit a kódoddal, változtasd meg egy helyen az értékeket, és figyeld meg, hogy változik az összképe az oldalnak
+

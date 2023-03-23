@@ -1,0 +1,64 @@
+------------ Santa Claus web-kívánság app ------------
+
+--FELADAT--:
+
+ Készíts mini kívánság küldő appot. Lásd web-santa-valus könyvtáron belül img mappa: 3 kép:
+ (santa-medium, santa-mobile, santa-mobile-menu.png) 
+
+ A fő előírások és pár kapott képen, és színkombináción kívűl szabad kezed van.
+ Most nulláról építsd fel az oldalt.
+
+-- Fő előírások --
+
+ - Használd a terminalból elérhető sass compiler-t! 
+ - SCSS eszközök használata: leglább 5 mixin, és 5 változó használata
+ - Minimum 3 scss file készítése
+ - @use használata
+ - @forward használata
+ - Reszponziv megjelenés legalább 2 méretben (mobil és 670px feletti törés)
+
+ - Mobile-nézetben lenyíló "hamburger menű" (ha nem tudod, hogy fogjál hozzá, nézd meg a t360- "sass" tananyag első 10-12 videóját)
+
+ - A lehető legtöbb helyen az elemek elrendezésére, és a reszponzításra használj  flex-box-ot.
+
+- Alap színek:
+
+ $banner-background-color: linear-gradient(45deg, #f5d3d0, #de362a);   ==> Header
+ $invers-background-color: linear-gradient(45deg, #de362a, #f5d3d0);   ==> Footer
+
+ többi színben szabad kezed van.
+
+ ---- Oldal felépítése ---
+
+ Nézd meg jól a képet, keres olyan részeket, ahol a megjelenésben, stílus jegyekben ismétlődést látsz. Pár támpont:
+
+ - Szövegdoboz a headerben és footerben. Ugyan az a sötét áttetsző háttérszín, lekerekített sarkok, fehéres szöveg szín
+ - A header-ben és a footerben is középre van rendezve a tartalom (flex-box)
+ - Linkek, "hamburger menü", gombok szöveg színe  megegyezik
+ - A kártyák és gombok hasonló lekerekítéssel, és árnyékolással rendelkeznek.
+ 
+ Gondold végig hol tudnál még ismétlödő formázást elcsipni, beletenni
+
+ Készítsd el először csak a HTML vázat.
+ 
+ Törekedj arra, hogy legalább 3-4 mixin-t legyártsál előre, mielött a style.scss file- készítésébe kezdesz
+ Készítsd el előre a szín-változóidat is.
+
+ A HEADER külön figyelmet érdemel:
+ 
+ csak tablet nézettől kezdve jelenjen meg a nagy kép. Minimum magasság:250px
+ egy ismétlödő háttérkép (ikon) van beállítva háttérben (frost.png)
+ van elötte a színes áttetsző div ( $banner-background-color)
+ és jobb oldalán legfelül még egy kép is megjelenik (christmas-card.jpg) (position: absolute javasolt)
+ 
+ Header alatt a nav bárban lévő linkeknél, ha kurzor fölé megy, akkor megváltozik a háttér 
+ (mobil nézetben lenyíláskor teljes szélességben a sor színe változik ==> (lásd mobile-menu kép)
+
+
+ FOOTER 
+
+ Hasonlóan épül fel, mint a HEADER de nincsenek képek a háttérben és az ellentésen írányú színt kell használni
+ Minimum magassága: 150px
+ 
+ Többi dologban szabad kéz. Sok sikert!!
+

@@ -1,0 +1,116 @@
+
+                  ----- DATING APP mini Projekt -------
+
+- FELADAT: 
+
+Készits egy mini alkalmazást scss eszközzel úgy, hogy minél kevesebb kód ismétlés legyen benne.
+
+Nézd meg a dating-app img könyvtárában az elkészítendő alkalamzás két nézetét (dating-app-mobile és medium.png)
+
+Ehhez adott egy közel teljesen kész index html file az app teljes tartalmával. Csak a scss tartalmakat kell megírnod hozzá.
+Amit neked kell megadnod html-ben az a dating-app img könyvtárában lévő képek és svg ikonok elérése csak.
+
+Hozz létre egy _color.scss file-t és egy _mixin.scss file-t a style.scss mellett.
+
+-- _color.scss tartalma:
+
+
+$banners-color: linear-gradient(45deg, #28a2ad, #c0f0e9);   (színekben szabad kezed van)
+$man-button-color: rgb(30, 30, 220);
+$woman-button-color: rgb(243, 136, 200);
+$text-holder-dark-background: rgba(30, 30, 30, 0.3);
+
+
+-- _mixin.scss tartalma kiindulásra:
+
+
+@mixin setBorders ($color: rgb(30, 30, 30), $border-radius: 0.7rem) {
+    border: 1px solid $color;
+    box-shadow: 1px 4px 4px 0 rgba(30, 30, 30, 0.3);
+    border-radius: $border-radius;
+}
+
+@mixin setButton ($color: rgb(0, 30, 170)) {
+    background: $color;
+    color: rgb(230, 230, 250);
+    @include setBorders();
+}
+
+@mixin setContentCenter ($width: 95%, $height: auto) {
+    width: $width;
+    min-height: $height;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+@mixin setImgSizeAndAlign ($border-color: rgb(30, 30, 30), $width: 100%) {
+    @include setContentCenter($width);
+    @include setBorders($border-color, 50%);
+}
+
+Ez a minimum kiindulás, igény szerint paramétert, vagy egyéb beltartalmat tegyél hozzá, ha szeretnél.
+
+-- style.scss
+
+
+"Húzd be" a két file-t a @use parancs segítségével!
+
+Épitsd fel nesting segitségével a scss tartalmat.
+
+-- HEADER:
+  .banner: 
+  minimum magassága 170px;
+  szélessége 100%
+  padding: 10px
+  háttér szín: $banners-color
+  A belső szöveges tartalmat helyezd középre mixin segítségével (50% szélességű tartalom)
+  Állitsd be neki "border"-t is a másik mixin segítségével
+  Háttér: $text-holder-dark-background
+  szöveg színe: whitesmoke
+
+
+-- MAIN
+   .partners:
+   A belső tartalmat helyezd középre setContentCenter mixin segítségével (97% szélességű tartalom, minium 300px magasság)
+   Állitsd be neki "border"-t is a másik mixin segítségével.
+
+   Kártyák fő beállításai:
+   Mobile-nézet középre zárás (mixinnel) 100% szélesség
+   Tablet nézet: 31% szélesség
+   
+
+   A "woman" kártyáknak állitsd be "border"-t is a mixin segítségével (szín: $woman-button-color)
+   A bennünk lévő kerek kép beállítsáhához használdj a setImgSizeAndAlign mixin-t. (border szín: $woman-button-color)
+   A gombok beállítsához ==> mixin setButton (szín: $woman-button-color)
+
+   A "man" kártya ugyan igy, csak ott a három szín: $man-button-color...
+
+   Mindkét kártya esetén a "hearth" és a "not-like" ikon beállítsához szintén használjátok fel a setContentCenter mixin-t
+
+
+-- FOOTER
+  .contact :
+  minimum magassága 170px
+  szélessége 100%
+  padding: 10px
+  háttér szín: $banners-color
+  A belső szöveges tartalmat helyezd középre mixin segítségével (50% szélességű tartalom)
+  Állitsd be neki "border"-t is a másik mixin segítségével
+  Háttér: $text-holder-dark-background
+  szöveg színe: whitesmoke
+   
+   
+ 
+Maradt a kódban valami ismétlődés? Nyugodtan húzd összébb, csinálj plusz mixin-t, ha értelmét látod.
+Kezd el játszani a forrás kóddal, állítsd át egy alap változó értéket, vagy mixin tartalmat.
+Figyeld meg, hogy változik az oldal összképe egy-egy változtatással..
+
+
+
+
+
+
+
+
+
