@@ -1,3 +1,58 @@
+.box {
+  display: inline-block;
+  border: 1px dotted black;
+}
 
+.p-1 {
+  padding: 8px;
+}
+
+.p-2 {
+  padding: 16px;
+}
+
+.p-3 {
+  padding: 24px;
+}
+
+.p-4 {
+  padding: 32px;
+}
+
+.p-5 {
+  padding: 40px;
+}
+
+.p-6 {
+  padding: 48px;
+}
+
+.p-7 {
+  padding: 56px;
+}
+
+.p-8 {
+  padding: 64px;
+}
+
+.p-9 {
+  padding: 72px;
+}
+
+.p-10 {
+  padding: 80px;
+}
+
+.font-red {
+  color: rgb(190, 63, 63);
+}
+
+.font-green {
+  color: #0f0;
+}
+
+.font-blue {
+  color: #00f;
+}
 
 /*# sourceMappingURL=style.css.map */

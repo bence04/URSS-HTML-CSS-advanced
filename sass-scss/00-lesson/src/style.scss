@@ -1,0 +1,22 @@
+.box {
+    display: inline-block;
+    border: 1px dotted black;
+}
+
+@for $i from 1 through 10 {
+    .p-#{$i} {
+        padding: $i * 8px;
+    }
+}
+
+$colors: (
+    "red": rgb(190, 63, 63),
+    "green": #0f0,
+    "blue": #00f
+);
+
+@each $color, $value in $colors {
+    .font-#{$color} {
+        color: $value;
+    }
+}
