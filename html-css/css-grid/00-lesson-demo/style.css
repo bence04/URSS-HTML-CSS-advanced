@@ -5,12 +5,6 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-        "header header header"
-        "nav main-content sidebar"
-        "footer footer footer";
     height: 100vh;
 }
 
@@ -46,4 +40,30 @@ body {
     padding: 20px;
     grid-area: footer;
     text-align: center;
+}
+
+/* Dekstop view */
+@media screen and (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "header header header"
+            "nav main-content sidebar"
+            "footer footer footer";
+    }
+}
+   
+/* Mobile view */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main-content"
+            "sidebar"
+            "footer";
+    }
 }
