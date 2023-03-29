@@ -1,12 +1,33 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
     gap: 10px;
+    grid-template-areas:
+        "sidebar header header header header header"
+        "sidebar content content content content content"
+        "sidebar footer footer footer footer footer";
 }
 
 .grid-item {
     background-color: #f0f0f0;
     padding: 1rem;
-    border: 1px solid black;
+    border: 1px solid #000;
     text-align: center;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
 }
