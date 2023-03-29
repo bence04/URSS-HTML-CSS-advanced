@@ -58,18 +58,15 @@ body {
 @media screen and (max-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-rows: auto auto 1fr auto;
         grid-template-areas: 
             "header"
             "nav"
             "main-content"
-            "sidebar"
             "footer";
     }
 
-    .header {
-        position: sticky;
-        top: 0;
-        width: 100%;
+    .sidebar {
+        display: none;
     }
 }
