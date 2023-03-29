@@ -66,4 +66,10 @@ body {
             "sidebar"
             "footer";
     }
+
+    .header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
 }
