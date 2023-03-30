@@ -1,4 +1,4 @@
-.move-me {
+/* .move-me {
     width: 100px;
     height: 100px;
     background-color: lightblue;
@@ -21,4 +21,31 @@
   
   .hover-me:hover {
     width: 300px;
+  } */
+/* 
+  @keyframes szinvaltas {
+    0% {
+      background-color: red;
+    }
+    33% {
+      background-color: green;
+    }
+    66% {
+      background-color: blue;
+    }
+    100% {
+      background-color: red;
+    }
+  } */
+
+  .button {
+    width: 150px;
+    height: 70px;
+    background: red;
+    transition: background-color 0.5s ease;
+    /* animation: szinvaltas 6s linear infinite; */
+  }
+
+  .button:hover {
+    background: blue;
   }
