@@ -23,7 +23,7 @@
     width: 300px;
   } */
 
-  @keyframes szinvaltas {
+ /*  @keyframes szinvaltas {
     0% {
       background-color: red;
     }
@@ -36,14 +36,26 @@
     100% {
       background-color: red;
     }
+  } */
+
+  @keyframes mozgas_es_atmeretezes {
+    0% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(900px) scale(2);
+      opacity: 0.5;
+    }
   }
 
   .button {
     width: 150px;
     height: 70px;
     background: red;
+    animation: mozgas_es_atmeretezes 4s ease-in-out infinite alternate;
     /* transition: background-color 0.5s ease; */
-    animation: szinvaltas 6s linear infinite;
+    /* animation: szinvaltas 6s linear infinite; */
   }
 
 /*   .button:hover {
