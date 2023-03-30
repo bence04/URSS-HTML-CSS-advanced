@@ -49,13 +49,42 @@
     }
   }
 
-  .button {
+  .btn {
     width: 150px;
     height: 70px;
     background: red;
-    animation: mozgas_es_atmeretezes 4s ease-in-out infinite alternate;
+    margin: 50px;
+  }
+
+  .button {
+    animation: mozgas_es_atmeretezes 4s linear infinite alternate;
     /* transition: background-color 0.5s ease; */
     /* animation: szinvaltas 6s linear infinite; */
+  }
+
+  .button-ease {
+    animation: mozgas_es_atmeretezes 4s ease infinite alternate;
+    background: green;
+  }
+
+  .button-ease-in {
+    animation: mozgas_es_atmeretezes 4s ease-in infinite alternate;
+    background: blue;
+  }
+
+  .button-ease-out {
+    animation: mozgas_es_atmeretezes 4s ease-out infinite alternate;
+    background: yellow;
+  }
+
+  .button-ease-in-out {
+    animation: mozgas_es_atmeretezes 4s ease-in-out infinite alternate;
+    background: orange;
+  }
+
+  .button-cubic-bezier {
+    animation: mozgas_es_atmeretezes 4s cubic-bezier(.04,1.84,.67,-0.95) infinite alternate;
+    background: purple;
   }
 
 /*   .button:hover {
