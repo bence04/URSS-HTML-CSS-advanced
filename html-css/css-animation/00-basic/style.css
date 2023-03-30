@@ -199,9 +199,18 @@
   height: 200px;
   position: relative;
   margin: 0 auto;
-  perspective: 800px;
+  perspective: 2000px;
   margin-top: 300px;
  }
+
+/*  .wrapper2 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-left: 100px;
+ } */
 
  .cube {
   width: 100%;
