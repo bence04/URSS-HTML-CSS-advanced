@@ -22,7 +22,7 @@
   .hover-me:hover {
     width: 300px;
   } */
-/* 
+
   @keyframes szinvaltas {
     0% {
       background-color: red;
@@ -36,16 +36,16 @@
     100% {
       background-color: red;
     }
-  } */
+  }
 
   .button {
     width: 150px;
     height: 70px;
     background: red;
-    transition: background-color 0.5s ease;
-    /* animation: szinvaltas 6s linear infinite; */
+    /* transition: background-color 0.5s ease; */
+    animation: szinvaltas 6s linear infinite;
   }
 
-  .button:hover {
+/*   .button:hover {
     background: blue;
-  }
+  } */
