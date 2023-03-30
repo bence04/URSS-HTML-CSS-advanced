@@ -23,7 +23,7 @@
     width: 300px;
   } */
 
- /*  @keyframes szinvaltas {
+/*  @keyframes szinvaltas {
     0% {
       background-color: red;
     }
@@ -38,7 +38,7 @@
     }
   } */
 
-  @keyframes mozgas_es_atmeretezes {
+/* @keyframes mozgas_es_atmeretezes {
     0% {
       transform: translateX(0) scale(1);
       opacity: 1;
@@ -47,9 +47,9 @@
       transform: translateX(900px) scale(2);
       opacity: 0.5;
     }
-  }
+  } */
 
-  .btn {
+/* .btn {
     width: 150px;
     height: 70px;
     background: red;
@@ -58,9 +58,9 @@
 
   .button {
     animation: mozgas_es_atmeretezes 4s linear infinite alternate;
-    /* transition: background-color 0.5s ease; */
-    /* animation: szinvaltas 6s linear infinite; */
-  }
+    transition: background-color 0.5s ease;
+    animation: szinvaltas 6s linear infinite;
+  }«
 
   .button-ease {
     animation: mozgas_es_atmeretezes 4s ease infinite alternate;
@@ -85,8 +85,41 @@
   .button-cubic-bezier {
     animation: mozgas_es_atmeretezes 4s cubic-bezier(.04,1.84,.67,-0.95) infinite alternate;
     background: purple;
-  }
+  } */
 
 /*   .button:hover {
     background: blue;
   } */
+
+  @keyframes mozgas_es_atmeretezes {
+    0% {
+      transform: scale(1) translateX(0) ;
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(2) translateX(900px);
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes atszinezes {
+    0% {
+      background: red;
+    }
+  
+    100% {
+      background: green;
+    }
+  }
+
+  
+.example {
+  width: 100px;
+  height: 100px;
+  margin: 100px;
+  background: red;
+  animation: atszinezes 2s ease infinite alternate,
+             mozgas_es_atmeretezes  6s linear infinite;
+}
+
